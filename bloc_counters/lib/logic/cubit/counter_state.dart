@@ -29,5 +29,9 @@ class CounterState extends Equatable {
       CounterState.fromMap(json.decode(source));
 
   @override
+  String toString() =>
+      'CounterState(counterValue: $counterValue, wasIncremented: $wasIncremented)';
+
+  @override
   List<Object?> get props => [counterValue, wasIncremented];
 }

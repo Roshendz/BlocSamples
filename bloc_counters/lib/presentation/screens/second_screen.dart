@@ -33,10 +33,10 @@ class _SecondScreenState extends State<SecondScreen> {
             ),
             BlocConsumer<CounterCubit, CounterState>(
               listener: (context, state) {
-                if (state.wasIncrented == true) {
+                if (state.wasIncremented == true) {
                   var snackBar = const SnackBar(content: Text('Incremented'));
                   ScaffoldMessenger.of(context).showSnackBar(snackBar);
-                } else if (state.wasIncrented == false) {
+                } else if (state.wasIncremented == false) {
                   var snackBar = const SnackBar(content: Text('Decremented'));
                   ScaffoldMessenger.of(context).showSnackBar(snackBar);
                 }
